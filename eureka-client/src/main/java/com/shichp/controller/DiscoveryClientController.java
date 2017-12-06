@@ -17,7 +17,10 @@ public class DiscoveryClientController {
     DiscoveryClient discoveryClient;
 
     @GetMapping("/dc")
-    public String discoryclient(){
+    public String discoryclient() throws InterruptedException{
+        //触发hystrix服务降级
+        Thread.sleep(5000L);
+
         String services = "services： " + discoveryClient.getServices();
         System.out.println(services);
         return services;
