@@ -15,4 +15,9 @@ public class FeignClientHystrix  implements EurekaClientService{
     public String discoryclient() {
         return "feign-client -hystrix == fallback : result = -1";
     }
+
+    @Override
+    public String check() {
+        return "feign-client -hystrix == fallback check: result = -2";
+    }
 }

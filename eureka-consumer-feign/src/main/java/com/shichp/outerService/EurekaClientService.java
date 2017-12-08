@@ -17,5 +17,6 @@ public interface EurekaClientService {
     @GetMapping("/dc")
     public String discoryclient();
 
-
+    @GetMapping("/check")
+    public String check();
 }

@@ -19,4 +19,9 @@ public class EurekaFeignController {
         return service.discoryclient();
     }
 
+    @GetMapping("/feign/check")
+    public String feignCheck(){
+        return service.check();
+    }
+
 }

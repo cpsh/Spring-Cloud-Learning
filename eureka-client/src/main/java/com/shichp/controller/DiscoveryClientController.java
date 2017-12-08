@@ -25,4 +25,11 @@ public class DiscoveryClientController {
         System.out.println(services);
         return services;
     }
+
+    @GetMapping("/check")
+    public String health(){
+        String health = "{\"status\" : \"up\"}";
+        System.out.println(health);
+        return health;
+    }
 }
